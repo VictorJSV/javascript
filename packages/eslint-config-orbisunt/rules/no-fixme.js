@@ -20,11 +20,14 @@ module.exports = {
   },
   create: function(context) {
     var sourceCode = context.getSourceCode();
-    var comments = sourceCode.getAllComments();
-    console.log("ss", comments)
     return {
-      LineComment: function(node) {
-        console.log('node', node)
+      Program: function() {
+        var comments = sourceCode.getAllComments();
+        comments.map((node)=> {
+          if (node.value.indexOf('FIXME') > -1) {
+            context.report(node, "NO FIXME PERMITIDO")
+          }
+        })
       }
     };
   }

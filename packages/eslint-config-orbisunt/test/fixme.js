@@ -1,6 +1,6 @@
 // FIXME: Esto es un bug
 function roroBug() {
-  
+
 }
 
 /**

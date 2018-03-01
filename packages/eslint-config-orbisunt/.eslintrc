@@ -1,0 +1,15 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module"
+  },
+  "extends": "",
+  "rules": {
+    "no-fixme": "error",
+    "no-example": "error",
+    "expire-regex": "error",
+    "pass-params": ["error", "alert", "findOranges", "findApples"],
+    "function-params": "error",
+    "fixable": "error"
+  }
+}
